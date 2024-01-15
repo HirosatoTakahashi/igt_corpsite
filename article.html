@@ -14,52 +14,38 @@
     
 </head>
 <body>
-<header>
-<!-- コンテンツ部分にヘッダーを埋め込む -->
-  <div id="headerContainer"></div>    
-<!--<div class="container">
-<div class="row">
-    <div class="col span-12">
-    <div class="head">
-        <h1><a href="index.html">株式会社IGT</a></h1>
-		<div class="telbox">TEL：00-0000-0000</div>
-        </div>
-    </div></div>
-<div class="row">
-    <div class="col span-12">
-        <nav>
-            <div id="open"></div>
-            <div id="close"></div>   
-            <div id="navi">
-        <ul>
-            <li><a href="index.html">ホーム</a></li>
-            <li><a href="subpage.html">ごあいさつ</a></li>
-            <li><a href="subpage.html">会社概要</a></li>
-            <li><a href="subpage.html">事業内容</a></li>
-            <li><a href="subpage.html">お問い合わせ</a></li>
-            </ul>
-                </div>
-        </nav>
-    </div>
-        </div>
-    </div>
--->
-    </header>
-    <div class="container">
-        <div class="row">
-            <div class="col span-12">
-                <div class="mainimg">
-                    <img src="img/mainimg.jpg" alt="メイン画像">
-                </div>
-            </div>
-        </div>
-    </div>
+      <!-- コンテンツ部分にヘッダーを埋め込む -->
+  <div id="headerContainer"></div>
+ <!--≈ <script>
+    // ヘッダーを非同期でロードする関数
+    function loadHeader() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          // 取得したヘッダーの内容をheaderContainer要素に設定
+          document.getElementById("headerContainer").innerHTML = this.responseText;
+        }
+      };
+      xhttp.open("GET", "header.html", true);
+      xhttp.send();
+    }
+
+    // ページのロードが完了したらヘッダーをロード
+    document.addEventListener("DOMContentLoaded", function() {
+      loadHeader();
+    });
+  </script>
+  -->
+<!--    <object type="text/html" data="header.html" width="100%" height="200"></object>-->
+<!--    <div class="mainimg">
+              <img src="img/mainimg.jpg" alt="メイン画像">
+    </div>-->
     <main>
 <div class="container">
 <div class="row">
     <div class="col span-12">
     <div class="news">
-		<h3>新着情報</h3>
+		<h2>新着情報</h2>
 		<ul>
 			<li>2024.1.14　ホームページを作成しました</li>
 		    <li class="article-item" onclick="showArticle('2024-01-14', '記事1')">2024-01-14 - 記事1</li>
@@ -76,6 +62,8 @@
           window.location.href = 'article.html';
         }
       </script>
+
+
 <!--
 	<div class="col span-4">
 		<a href=""><img src="img/banner.png" alt="バナー画像"></a>
@@ -85,12 +73,24 @@
 -->
     </div>    
         </div>
+        <script>
+            // localStorageから記事のデータを取得
+            const selectedArticle = JSON.parse(localStorage.getItem('selectedArticle'));
+          
+            // 記事のデータを表示
+            document.write('<div class="container"');
+            document.write('<div class="row">');
+            document.write('<div class="col span-12">');
+            document.write('<h1>' + selectedArticle.title + '</h1>');
+            document.write('<p>' + selectedArticle.date + '</p>');
+            document.write('<p>記事の本文がここに表示されます。</p>');
+            document.write('<div class="row">');
+            document.write('</div></div>');
+          </script>
     </main>
     <footer>
-        <!-- コンテンツ部分にフッターを埋め込む -->
-  <div id="footerContainer"></div>  
-<!--<div class="container">
-<div class="row">
+<div class="container">
+<!-- <div class="row">
     <div class="col span-4">
         <h5>フッター１</h5>
         <p>ここにSNSやテキストなどが入ります。SNSやテキストなどが入ります。</p>
@@ -104,7 +104,7 @@
         <p>ここにSNSやテキストなどが入ります。SNSやテキストなどが入ります。</p>
     </div>
         </div>
-</div>-->
+</div>
     </footer>
     <div class="copyright">
 <div class="container">

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>シンプルコーポレートサイト</title>
+    <link rel="stylesheet" media="all" href="css/ress.min.css" />
+    <link rel="stylesheet" media="all" href="css/style.css" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/style.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col span-12">
+                    <div class="head">
+                        <h1><a href="index.html">株式会社IGT</a></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col span-12">
+                    <nav>
+                        <div id="open"></div>
+                        <div id="close"></div>
+                        <div id="navi">
+                            <ul>
+                                <li><a href="index.html">ホーム</a></li>
+                                <li><a href="subpage.html">ごあいさつ</a></li>
+                                <li><a href="subpage2.html">会社概要</a></li>
+                                <li><a href="subpage3.html">事業内容</a></li>
+                                <li><a href="subpage4.html">お問い合わせ</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="content"></div>
+
+    <!--
+    <script>
+      function loadContent(page) {
+        // Ajaxを使用してページの内容を取得し、content要素に表示
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("content").innerHTML = this.responseText;
+          }
+        };
+        xhttp.open("GET", page, true);
+        xhttp.send();
+      }
+    </script>
+    -->
+</body>
+
+</html>
