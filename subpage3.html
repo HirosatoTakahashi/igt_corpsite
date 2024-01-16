@@ -19,35 +19,35 @@
 <body>
     <header>
         <!-- コンテンツ部分にヘッダーを埋め込む -->
-        <!-- <div id="headerContainer"></div>  -->   
-    
-            <div class="container">
-                <div class="row">
-                    <div class="col span-12">
-                        <div class="head">
-                            <h1><a href="index.html">株式会社IGT</a></h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col span-12">
-                        <nav>
-                            <div id="open"></div>
-                            <div id="close"></div>
-                            <div id="navi">
-                                <ul>
-                                    <li><a href="index.html">ホーム</a></li>
-                                    <li><a href="subpage.html">ごあいさつ</a></li>
-                                    <li><a href="subpage2.html">会社概要</a></li>
-                                    <li><a href="subpage3.html">事業内容</a></li>
-                                    <li><a href="subpage4.html">お問い合わせ</a></li>
-                                </ul>
-                            </div>
-                        </nav>
+        <!-- <div id="headerContainer"></div>  -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col span-12">
+                    <div class="head">
+                        <h1><a href="index.html">株式会社IGT</a></h1>
                     </div>
                 </div>
             </div>
-        </header>
+            <div class="row">
+                <div class="col span-12">
+                    <nav>
+                        <div id="open"></div>
+                        <div id="close"></div>
+                        <div id="navi">
+                            <ul>
+                                <li><a href="index.html">ホーム</a></li>
+                                <li><a href="subpage.html">ごあいさつ</a></li>
+                                <li><a href="subpage2.html">会社概要</a></li>
+                                <li><a href="subpage3.html">事業内容</a></li>
+                                <li><a href="subpage4.html">お問い合わせ</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
     <div class="mainimg">
         <main>
             <article>
@@ -72,6 +72,12 @@
                             <style>
                                 table {
                                     border-collapse: collapse;
+                                    width: 100%;
+                                    text-align: center;
+                                    /*display: flex;*/
+                                    flex-wrap: nowrap;
+                                    justify-content: space-around;
+                                    /* 画像を中央揃え */
                                 }
 
                                 table td {
@@ -79,6 +85,10 @@
                                     padding: 10px;
                                     text-align: left;
                                     /* テキストを左寄せにする */
+                                    /*white-space: nowrap;
+                                    /* テキストの改行を禁止 */
+                                    border-bottom: none;
+                                    /* テーブルの最後の行のセルにボーダーを適用しない */
                                 }
 
                                 table img {
@@ -89,34 +99,53 @@
                                 }
 
                                 table img {
-                                    display: block;
+                                    /*display: block;
                                     /* 画像をブロック要素に変更してマージンの影響を受けないようにする */
                                     margin: 0 auto;
                                     /* 左右のマージンを自動でセンタリング */
                                     max-height: 200px;
                                     /* 画像の高さを固定 */
-                                    width: auto;
+                                    /*width: auto;*/
                                     /* 幅は自動的に調整 */
                                     object-fit: cover;
                                     /* 画像を切り取るようにフィットさせる */
+                                    aspect-ratio: 4 / 3;
+                                    /* アスペクト比を1:1に設定 */
+                                    vertical-align: middle;
+                                    /* 画像を中央揃えにする */
                                 }
                             </style>
 
                             <table>
                                 <tr>
-                                    <td>・耕種農業<img src="img/IMG_0539.JPG" alt="耕種農業"></td>
-                                    <td>・自動車整備業<img src="img/IMG_0545.JPG" alt="自動車整備業"></td>
-                                    <td>・介護<img src="img/IMG_0542.JPG" alt="介護"></td>
+                                    <td>・耕種農業</td>
+                                    <td>・自動車整備業</td>
+                                    <td>・介護</td>
                                 </tr>
                                 <tr>
-                                    <td>・酪農業＆肉牛育成業<img src="img/IMG_0540.JPG" alt="酪農業＆肉牛育成業"></td>
-                                    <td>・飲食料品製造業<img src="img/IMG_0547.JPG" alt="飲食料品製造業"></td>
-                                    <td>・宿泊業<img src="img/IMG_0546.JPG" alt="宿泊業"></td>
+                                    <td><img src="img/IMG_0539.JPG" alt="耕種農業"></td>
+                                    <td><img src="img/IMG_0545.JPG" alt="自動車整備業"></td>
+                                    <td><img src="img/IMG_0542.JPG" alt="介護"></td>
                                 </tr>
                                 <tr>
-                                    <td>・建設業<img src="img/IMG_0544.JPG" alt="建設業"></td>
-                                    <td>・外食業<img src="img/IMG_0543.JPG" alt="外食業"></td>
-                                    <td>・ビルクリーニング業<img src="img/IMG_0541.JPG" alt="ビルクリーニング業"></td>
+                                    <td>・酪農業＆肉牛育成業</td>
+                                    <td>・飲食料品製造業</td>
+                                    <td>・宿泊業</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="img/IMG_0540.JPG" alt="酪農業＆肉牛育成業"></td>
+                                    <td><img src="img/IMG_0547.JPG" alt="飲食料品製造業"></td>
+                                    <td><img src="img/IMG_0546.JPG" alt="宿泊業"></td>
+                                </tr>
+                                <tr>
+                                    <td>・建設業</td>
+                                    <td>・外食業</td>
+                                    <td>・ビルクリーニング業</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="img/IMG_0544.JPG" alt="建設業"></td>
+                                    <td><img src="img/IMG_0543.JPG" alt="外食業"></td>
+                                    <td><img src="img/IMG_0541.JPG" alt="ビルクリーニング業"></td>
                                 </tr>
                             </table>
                             <br>
